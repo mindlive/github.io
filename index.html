@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #additionalText {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <div id="mainText">
+        <p>This is some initial text that appears on the page.</p>
+        <button onclick="revealText()">Click to reveal more</button>
+    </div>
+    <div id="additionalText">
+        <p>This is some additional text that appears after clicking the button.</p>
+    </div>
+
+    <script>
+        function revealText() {
+            var mainText = document.getElementById("mainText");
+            var additionalText = document.getElementById("additionalText");
+            var button = mainText.querySelector("button");
+            additionalText.style.display = "block";
+            button.style.display = "none";
+        }
+    </script>
+</body>
+</html>
